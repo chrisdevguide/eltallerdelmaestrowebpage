@@ -1,0 +1,49 @@
+/* ------------------------------------- PROTOTYPES ---------------------------------------------- */
+.styledButton {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  padding: 5px 10px;
+  color: #fff;
+}
+.styledButton:hover {
+  background-color: #ff9d4d;
+  border-color: #ff9d4d;
+  transition: all 60ms ease-in-out;
+}
+/* ------------------------------------- NAVBAR ---------------------------------------------- */
+#navItems,
+#logo {
+  margin-top: 60px;
+}
+#navItems {
+  margin-right: 70px;
+}
+#navItems a {
+  color: #fff;
+}
+#logo {
+  margin-left: 70px;
+}
+
+/* ------------------------------------- HERO SECTION ---------------------------------------------- */
+#backgroundImageContainer {
+  background-image: url("/assets/_MG_4649.JPG");
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+#heroSection {
+  min-height: 100vh;
+}
+#heroTitle h1 {
+  font-size: 55px;
+  font-weight: 600;
+}
+#heroTitle p {
+  font-weight: 600;
+}
+#heroTitle {
+  margin-right: 70px;
+}
