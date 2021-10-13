@@ -1,15 +1,21 @@
-/* ------------------------------------- PROTOTYPES ---------------------------------------------- */
+/* ------------------------------------- PROTOTYPES AND MAIN ---------------------------------------------- */
 .styledButton {
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 100px;
   padding: 5px 10px;
   color: #fff;
+  font-size: 20px;
 }
 .styledButton:hover {
   background-color: #ff9d4d;
   border-color: #ff9d4d;
-  transition: all 60ms ease-in-out;
+  transition: all 60ms ease;
+}
+nav,
+#heroSection,
+#statementSection {
+  margin-inline: 70px;
 }
 /* ------------------------------------- NAVBAR ---------------------------------------------- */
 #navItems,
@@ -17,17 +23,20 @@
   margin-top: 60px;
 }
 #navItems {
-  margin-right: 70px;
+  font-size: 25px;
 }
 #navItems a {
   color: #fff;
 }
-#logo {
-  margin-left: 70px;
+.nav-item {
+  margin-right: 20px;
+  cursor: pointer;
 }
-
+.nav-item:last-of-type {
+  margin-right: 0;
+}
 /* ------------------------------------- HERO SECTION ---------------------------------------------- */
-#backgroundImageContainer {
+#heroImageContainer {
   background-image: url("/assets/_MG_4649.JPG");
   background-position: center;
   background-size: cover;
@@ -44,6 +53,83 @@
 #heroTitle p {
   font-weight: 600;
 }
-#heroTitle {
-  margin-right: 70px;
+/* ------------------------------------- STATEMENT SECTION ---------------------------------------------- */
+#statementSection {
+  min-height: 80vh;
+}
+#statementSection article {
+  text-align: center;
+}
+#statementSection h2 {
+  font-size: 60px;
+  color: #505660;
+}
+#statementSection p {
+  font-size: 25px;
+  color: #404347;
+}
+
+/* ------------------------------------- KNOWUS SECTION ---------------------------------------------- */
+#knowUsSection {
+  background-color: #505660;
+  height: 100vh;
+}
+
+#knowUsSection h2 {
+  position: relative;
+  left: 50%;
+  top: 80px;
+  font-size: 70px;
+  color: #fff;
+  width: 500px;
+  z-index: 2;
+}
+
+#knowUsSection img {
+  width: 42vw;
+}
+#knowUsSection .imagesContainer {
+  width: 100vw;
+}
+#knowUsSection .imagesContainer > img:first-of-type {
+  position: relative;
+  bottom: 50px;
+  left: 50px;
+  z-index: 1;
+}
+#knowUsSection .imagesContainer > img:last-of-type {
+  position: relative;
+  top: 100px;
+  right: 50px;
+}
+#knowUsSection .styledButton {
+  position: relative;
+  top: 60px;
+  left: 500px;
+}
+/* ------------------------------------- ACTIVITIES SECTION ---------------------------------------------- */
+#activitiesSection {
+  height: 100vh;
+  background-image: url("/assets/image_church1.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+#activitiesSection .activityTitleContainer {
+  height: 100vh;
+  color: #fff;
+  margin-top: 150px;
+}
+#activitiesSection .activityTitleContainer h3 {
+  font-family: "Darker Grotesque", sans-serif;
+  width: 60%;
+  font-weight: 900;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+#activitiesSection .activityTitleContainer p {
+  font-family: "Darker Grotesque", sans-serif;
+  width: 60%;
+  font-weight: 700;
+  font-size: 25px;
 }
