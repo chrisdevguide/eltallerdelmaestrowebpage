@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  contactForm: FormGroup;
   constructor() { }
+
+  createContactForm() {
+    this.contactForm = new FormGroup({
+      name: new FormControl('', [Validators.required]),
+      surname: new FormControl('', Validators.required),
+      request: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
+      phone: new FormControl('', Validators.required)
+    });
+  }
 
   ngOnInit(): void {
     let h3Elements: HTMLElement[] = <HTMLElement[]><unknown>(document.querySelectorAll('#activitiesSection .activityTitleContainer h3'));
@@ -50,6 +61,7 @@ export class HomeComponent implements OnInit {
         let elem = (<HTMLElement>document.querySelector('#activitiesSection'));
         elem.style.backgroundImage = 'url("/assets/image_church4.jpeg")';
       });
+    this.createContactForm();
   }
 
 }

@@ -17,9 +17,23 @@ nav,
 #statementSection {
   margin-inline: 70px;
 }
+.styledInput {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  color: #505660;
+}
+.styledInput:focus {
+  border-bottom: 1px solid #fff;
+  outline: none;
+}
+.styledInput::placeholder {
+  color: #fff;
+}
 /* ------------------------------------- NAVBAR ---------------------------------------------- */
 #navItems,
-#logo {
+.logo {
   margin-top: 60px;
 }
 #navItems {
@@ -28,10 +42,14 @@ nav,
 #navItems a {
   color: #fff;
 }
+#navItems a:hover {
+  color: #505660;
+}
 .nav-item {
   margin-right: 20px;
   cursor: pointer;
 }
+
 .nav-item:last-of-type {
   margin-right: 0;
 }
@@ -132,4 +150,337 @@ nav,
   width: 60%;
   font-weight: 700;
   font-size: 25px;
+}
+/* ------------------------------------- ACTIVITIES SECTION ---------------------------------------------- */
+
+#activitiesSection {
+  height: 100vh;
+  background-image: url("/assets/image_church1.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+#activitiesSection .activityTitleContainer {
+  height: 100vh;
+  color: #fff;
+  margin-top: 150px;
+}
+#activitiesSection .activityTitleContainer h3 {
+  font-family: "Darker Grotesque", sans-serif;
+  width: 60%;
+  font-weight: 900;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+#activitiesSection .activityTitleContainer p {
+  font-family: "Darker Grotesque", sans-serif;
+  width: 60%;
+  font-weight: 700;
+  font-size: 25px;
+}
+/* ------------------------------------- CONNECT SECTION ---------------------------------------------- */
+
+#connectSection {
+  background-color: #ff9d4d;
+  height: 80vh;
+  color: #fff;
+}
+#connectSection h3 {
+  font-size: 86px;
+  margin-top: 60px;
+}
+#connectSection p {
+  font-size: 30px;
+  font-family: "Darker Grotesque", sans-serif;
+  line-height: 41px;
+}
+#connectSectionLinksGroup {
+  margin-top: 70px;
+}
+.connectSectionLinks {
+  display: flex;
+  flex-direction: row;
+}
+.connectSectionLinks h4 {
+  cursor: pointer;
+  font-size: 45px;
+  margin-right: 15px;
+  font-weight: 700;
+  font-family: "Darker Grotesque", sans-serif;
+}
+.connectSectionLinks h4:hover {
+  color: #505660;
+}
+.connectSectionLinks h4:hover + mat-icon {
+  display: flex;
+}
+
+.connectSectionLinks mat-icon {
+  display: none;
+  margin-top: 8px;
+  color: #505660;
+  font-size: 50px;
+}
+/* ------------------------------------- GENEROUS LIFE SECTION ---------------------------------------------- */
+
+#generousLifeSection {
+  height: 100vh;
+  padding: 70px;
+}
+
+#generousLifeSectionContent p {
+  font-size: 20px;
+  font-family: "Darker Grotesque", sans-serif;
+  color: #505660;
+  position: relative;
+  top: 20%;
+}
+#generousLifeSectionContent h2 {
+  position: absolute;
+  font-size: 70px;
+  color: #505660;
+  width: 700px;
+}
+#generousLifeSectionContent {
+  width: 30vw;
+}
+.generousLifeSectionImageContainer {
+  height: 70vh;
+  width: 30vw;
+}
+.generousLifeSectionImageContainer div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.generousLifeSectionImageContainer button {
+  /* align-self: flex-end; */
+  margin: 0 20px 20px 0;
+}
+.generousLifeSectionImageContainer button:hover {
+  /* align-self: flex-end; */
+  background-color: #ff6a00;
+}
+
+.generousLifeSectionImageContainer:nth-of-type(2) > img {
+  width: 100%;
+  height: 85%;
+  margin-top: 100px;
+  left: 40px;
+  position: relative;
+  z-index: 2;
+}
+.generousLifeSectionImageContainer:nth-of-type(3) > img {
+  width: 100%;
+  height: 85%;
+  z-index: 1;
+  position: relative;
+}
+#generousLifeSectionImageContainerBackgroundBlock1 {
+  width: 100%;
+  height: 25vh;
+  position: relative;
+  left: 60px;
+  z-index: 1;
+  bottom: 100px;
+  background-color: #ff9d4d;
+}
+#generousLifeSectionImageContainerBackgroundBlock2 {
+  width: 100%;
+  height: 25vh;
+  position: relative;
+  left: 30px;
+  bottom: 100px;
+  background-color: #f7c052;
+}
+/* ------------------------------------- FORM SECTION ---------------------------------------------- */
+
+#formSection {
+  height: 200vh;
+  background-color: #f7c052;
+}
+#formSection {
+  height: 100vh;
+}
+#formSectionContent > h2 {
+  font-size: 55px;
+  color: #fff;
+}
+#formSectionContent > p {
+  font-size: 25px;
+  font-family: "Darker Grotesque", sans-serif;
+  color: #505660;
+}
+#contactForm {
+  width: 60vw;
+}
+#formSection .col {
+  margin-top: 50px;
+}
+#formSection button {
+  width: 150px;
+  height: 50px;
+  margin-left: 10px;
+}
+#dataAgreementLabel {
+  color: #505660;
+}
+.control {
+  font-family: arial;
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 11px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control_indicator {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  /* background: #e6e6e6; */
+  border: 2px solid #f8f0f0;
+  border-radius: 20px;
+}
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: transparent;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #505660;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+  background: #505660;
+}
+.control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 0;
+  pointer-events: none;
+}
+.control_indicator:after {
+  box-sizing: unset;
+  content: "";
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+.control-checkbox .control_indicator:after {
+  left: 7px;
+  top: 3px;
+  width: 3px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
+.control-checkbox .control_indicator::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4.452rem;
+  height: 4.5rem;
+  margin-left: -1.5rem;
+  margin-top: -1.5rem;
+  background: #ffffff;
+  border-radius: 3rem;
+  opacity: 0.3;
+  z-index: 99999;
+  transform: scale(0);
+}
+@keyframes s-ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes s-ripple-dup {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+.control-checkbox input + .control_indicator::before {
+  animation: s-ripple 250ms ease-out;
+}
+.control-checkbox input:checked + .control_indicator::before {
+  animation-name: s-ripple-dup;
+}
+.control-group {
+  max-width: 80%;
+}
+
+/* ------------------------------------- FOOTBAR SECTION ---------------------------------------------- */
+
+#footbarSection {
+  height: 75vh;
+  width: 100vw;
+  background-color: #f7c052;
+  color: #fff;
+}
+#footbar {
+  height: 75vh;
+  width: 100vw;
+  background-color: #505660;
+  border-radius: 230px 230px 0 0;
+}
+#footbarSection .row {
+  width: 100%;
+}
+#footbarSection .col {
+  margin: 20px 0 10px 150px;
+}
+
+#footbarTitles {
+  font-weight: 700;
+  margin-top: 100px;
+}
+#footbarSection hr {
+  width: 100%;
+  border: 1px solid #fff;
+}
+#footerLinks p {
+  color: #fff;
+  font-weight: 400;
+  font-family: "Darker Grotesque", sans-serif;
+  cursor: pointer;
+  font-size: 20px;
+}
+#footerLinks p:hover {
+  font-weight: 700;
+}
+#footbarSection mat-icon {
+  margin-right: 5px;
+  /* margin-top: 10px; */
 }
